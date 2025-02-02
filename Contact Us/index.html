@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="../common/common-styles.css" />
+    <link rel="icon" type="image/x-icon" href="../Images/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <script
+      src="https://kit.fontawesome.com/c9ac21621f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Contact Us</title>
+  </head>
+  <body>
+    <div class="header">
+      <a href="../index.html">
+        <img src="/Images/iconbanner.png" class="headicon" />
+      </a>
+      <div class="menu-btn-container">
+        <i class="fa-solid fa-bars menu-button"></i>
+        <div class="material-symbols-outlined btn-close hidden">close</div>
+      </div>
+    </div>
+    <div class="menu-container menu-hidden">
+      <div class="menu-items">
+        <a class="item" href="/">Home</a>
+        <a class="item" href="/Contact Us/index.html">Contact Us</a>
+        <a class="item" href="/Paid Ads/index.html">Paid Ads</a>
+        <a class="item" href="/SEO/index.html">SEO</a>
+        <a class="item" href="/Social Media/index.html">Social Media</a>
+        <a class="item" href="/Web Design/index.html">Web Design</a>
+        <a class="item" href="/Web Development/index.html">Web Development</a>
+        <a class="item" href="/Brand Design/index.html">Brand Design</a>
+        <a class="item" href="/Copywriting/index.html"> Copywriting</a>
+        <a class="item" href="/Lead Generation/index.html"> Lead Generation</a>
+        <a
+          class="item"
+          target="_blank"
+          href="https://substack.com/profile/200102860-red-beam-digital"
+          >Blog</a
+        >
+      </div>
+    </div>
+    <main>
+      <div class="contact-box">
+        <h3 class="title">Contact Us</h3>
+        <p class="contact-info">
+          Please don't hesitate to leave us a message. We are committed to
+          providing a timely and thorough response to your inquiries.
+        </p>
+      </div>
+      <form action="https://formspree.io/f/xpzvzwkb" method="POST">
+        <div class="name-text">
+          <div class="row">
+            <div class="straight">
+              <h5 class="titles">First Name</h5>
+              <input type="text" name="firstName" class="names" />
+            </div>
+            <div class="straight">
+              <h5 class="titles">Last Name</h5>
+              <input type="text" name="lastName" class="names" />
+            </div>
+          </div>
+          <div class="inner">
+            <h5 class="titles">Email</h5>
+            <input type="text" name="email" class="text" />
+            <h5 class="titles">Message</h5>
+            <textarea name="message" class="textarea"></textarea>
+          </div>
+          <button type="submit" class="button">Submit</button>
+        </div>
+      </form>
+    </main>
+    <footer>
+      <a
+        href="https://www.linkedin.com/company/99341810/admin/feed/posts/"
+        target="_blank"
+      >
+        <div class="icon"><i class="fa-brands fa-linkedin"></i></div>
+      </a>
+      <a
+        href="https://www.facebook.com/profile.php?id=100088562875367"
+        target="_blank"
+      >
+        <div class="icon"><i class="fa-brands fa-facebook"></i></div>
+      </a>
+      <a href="https://twitter.com/redbeamdigital" target="_blank">
+        <div class="icon"><i class="fa-brands fa-x-twitter"></i></div>
+      </a>
+      <a href="https://www.instagram.com/redbeamdigital/" target="_blank">
+        <div class="icon"><i class="fa-brands fa-instagram"></i></div>
+      </a>
+      <a href="https://www.pinterest.com/redbeamdigital/" target="_blank">
+        <div class="icon"><i class="fa-brands fa-pinterest"></i></div>
+      </a>
+      <a href="https://www.behance.net/redbeamdigital" target="_blank">
+        <div class="icon"><i class="fa-brands fa-square-behance"></i></div>
+      </a>
+      <a
+        href="https://www.youtube.com/channel/UCk5OGCOZ8YmfHRMYWBJYE1Q"
+        target="_blank"
+      >
+        <div class="icon"><i class="fa-brands fa-youtube"></i></div>
+      </a>
+      <img src="../Images/flag.svg" class="flag" />
+    </footer>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-MZRST95NGD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MZRST95NGD");
+    </script>
+    <script src="../common/common-js.js"></script>
+  </body>
+</html>

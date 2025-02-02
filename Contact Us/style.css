@@ -1,0 +1,184 @@
+* {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.contact-info {
+  color: var(--Red-Beam-fire-Red, #f10707);
+  font-family: Poppins;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 225%; /* 63px */
+}
+
+.title {
+  color: #000;
+  font-family: Poppins;
+  font-size: 2.3rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 190%; /* 133px */
+}
+.straight {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+.titles {
+  font-size: 1rem;
+}
+
+.text {
+  border-radius: 6px;
+  border: 4px solid var(--Red-Beam-Pure-Black, #000);
+  background: #fff;
+  width: 19rem;
+  height: 3rem;
+}
+.names {
+  border-radius: 6px;
+  border: 4px solid var(--Red-Beam-Pure-Black, #000);
+  background: #fff;
+  width: 19rem;
+  height: 3rem;
+}
+
+.name-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 1rem 1rem;
+  gap: 7px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  padding: 1rem 0.8rem;
+}
+
+.inner {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 0.5rem;
+}
+
+.textarea {
+  border-radius: 6px;
+  border: 4px solid var(--Red-Beam-Pure-Black, #000);
+  background: #fff;
+  width: 19rem;
+  height: 8rem;
+}
+
+.button {
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 3px 17px 0 rgba(232, 21, 21, 0.6);
+  width: 19rem;
+  height: 44px;
+  background-color: #e81515;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 1rem;
+  border: none;
+  display: flex;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+@media screen and (min-width: 768px) {
+  .contact-box {
+    padding: 1rem 5.9rem;
+  }
+
+  .names {
+    width: 17rem;
+  }
+  .name-text {
+    height: 100%;
+    gap: 17px;
+  }
+  .text {
+    width: 34rem;
+  }
+
+  .straight {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+  }
+  .textarea {
+    width: 34.5rem;
+    height: 13rem;
+  }
+  .row {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .button {
+    width: 34.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact-box {
+    padding: 0.1rem 7.9rem;
+  }
+
+  .contact-info {
+    font-size: 1.7rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .names {
+    width: 37rem;
+  }
+
+  .text {
+    width: 75rem;
+  }
+  .textarea {
+    width: 75rem;
+    height: 15rem;
+  }
+
+  .inner {
+    margin-top: 0.1rem;
+  }
+
+  .name-text {
+    gap: 10px;
+  }
+
+  .button {
+    width: 75rem;
+    transition: all 0.3s ease-in-out;
+    margin-top: 0.3rem;
+    font-size: 1rem;
+  }
+  .button:hover {
+    transform: scale(1.02);
+  }
+
+  main {
+    margin-top: 4.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: normal;
+    align-items: center;
+  }
+}
