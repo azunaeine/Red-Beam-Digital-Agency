@@ -30,6 +30,33 @@
 .about-text {
   max-width: 800px;
   text-align: left;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.readmorebutton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 3px 17px 0 rgba(232, 21, 21, 0.6);
+  width: 252px;
+  height: 44px;
+  background-color: #e81515;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 200;
+  font-size: 1.1rem;
+  margin: 1rem 0 2rem 0;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.readmorebutton:hover {
+  background-color: #c41212;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(232, 21, 21, 0.7);
 }
 
 .about-text p {
@@ -143,6 +170,15 @@
     text-align: left;
     gap: 4rem;
   }
+  .readmorebutton:hover {
+    transform: scale(1.1);
+  }
+
+  .readmorebutton {
+    transition: all 0.3s ease-in-out;
+    width: 252px;
+    height: 44px;
+  }
 
   .about-text {
     flex: 1;
@@ -207,6 +243,18 @@
   padding: 0 2rem;
   box-sizing: border-box;
   align-items: stretch;
+}
+
+.readmorebutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  box-shadow: 0 3px 17px 0 rgba(232, 21, 21, 0.6);
+  width: 252px;
+  height: 44px;
+  background-color: #e81515;
+  color: #fff;
 }
 
 .team-member {
@@ -401,5 +449,18 @@
 
   .team-grid {
     max-width: 1000px;
+  }
+
+  .readmorebutton {
+    display: flex;
+    border-radius: 6px;
+    box-shadow: 0 3px 17px 0 rgba(232, 21, 21, 0.6);
+    width: 252px;
+    height: 56px;
+    background-color: #e81515;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
   }
 }
