@@ -4,6 +4,96 @@
   margin: 0;
 }
 
+/* Avatar and Social Media Styles */
+.avatar-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 1.5rem 0;
+}
+
+.avatar-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.avatar-item {
+  position: relative;
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.avatar {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.avatar-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.avatar-item:active {
+  transform: translateY(-2px);
+}
+
+.avatar-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 12px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.avatar-item:hover .avatar-label {
+  background: rgba(231, 15, 15, 0.9);
+  color: white;
+}
+
+.social-description {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 800px;
+  color: #333;
+  font-weight: 500;
+  line-height: 1.6;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .avatar-row {
+    gap: 1rem;
+  }
+
+  .social-description {
+    font-size: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .avatar {
+    max-width: 100%;
+  }
+}
+
 .title {
   color: #000;
   text-align: center;
@@ -120,4 +210,62 @@
   .buy:hover {
     transform: scale(1.1);
   }
+}
+
+/* Writing section styles */
+.writing-row {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.writing-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  text-align: center;
+}
+
+.writing-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.writing-link:hover .writing-image {
+  transform: scale(1.02);
+}
+
+.writing-link::after {
+  content: "Read My Article →";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2em;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.writing-link:hover::after {
+  opacity: 1;
+}
+
+.web-description {
+  text-align: center;
+  margin: 1rem auto 2rem;
+  max-width: 800px;
+  color: #333;
+  line-height: 1.6;
+  padding: 0 1rem;
 }
