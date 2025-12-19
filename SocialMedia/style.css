@@ -50,11 +50,32 @@
   width: 100%;
 }
 
+.avatar-item {
+  position: relative;
+  display: inline-block;
+}
+
 .avatar {
   width: clamp(90px, 22vw, 160px);
   max-width: 100%;
   height: auto;
   object-fit: contain;
+  display: block;
+}
+
+.avatar-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+  color: #fff;
+  font-weight: 700;
+  background: rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
+  pointer-events: none;
 }
 
 .mini {
