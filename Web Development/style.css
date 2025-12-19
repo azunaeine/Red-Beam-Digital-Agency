@@ -58,11 +58,94 @@
   gap: 0.48rem;
 }
 
+/* Web Development Portfolio Section */
+.web-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  width: 100%;
+  margin: 1.5rem 0;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+.web-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 180ms ease;
+  transform-origin: center;
+}
+
+.web-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 180ms ease;
+  max-width: 100%;
+}
+
+.websiteview {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.web-label {
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #000;
+  transition: color 180ms ease;
+  max-width: 100%;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Hover and Active States */
+.web-link:hover {
+  transform: scale(1.02);
+}
+
+.web-link:active {
+  transform: scale(0.98);
+}
+
+.web-link:hover .web-label {
+  color: #f10707;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .web-row {
+    gap: 1rem;
+    padding: 0 0.5rem;
+  }
+
+  .web-link {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .web-label {
+    font-size: 0.9rem;
+  }
+}
+
 .center-one {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
+  flex-direction: column;
+  width: 100%;
 }
 
 .normal {
