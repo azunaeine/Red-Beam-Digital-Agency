@@ -115,7 +115,7 @@
   transition: color 180ms ease, font-size 200ms ease;
   background: rgba(0, 0, 0, 0.35);
   pointer-events: none;
-  font-size: clamp(0.75rem, 3.5vw, 1.25rem);
+  font-size: 0.4rem;
   font-weight: 700;
   padding: 0.5rem;
   text-wrap: nowrap;
@@ -191,7 +191,7 @@
 
 @media screen and (min-width: 768px) {
   .avatar-label {
-    font-size: clamp(0.875rem, 1.5vw, 1.1rem);
+    font-size: 0.8rem;
   }
 }
 
@@ -221,5 +221,8 @@
   }
   .buy:hover {
     transform: scale(1.1);
+  }
+  .avatar-label {
+    font-size: 1.4rem;
   }
 }
