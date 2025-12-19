@@ -41,6 +41,22 @@
   justify-content: center;
 }
 
+.avatar-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.avatar {
+  width: clamp(90px, 22vw, 160px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
 .mini {
   width: 17.8em;
   height: 34em;
@@ -92,6 +108,10 @@
     gap: 0.8rem;
   }
 
+  .avatar {
+    width: 14rem;
+  }
+
   .summary {
     font-size: 0.95em;
   }
@@ -102,6 +122,10 @@
     font-size: 1.75em;
     padding-right: 2rem;
     padding-left: 2rem;
+  }
+
+  .avatar {
+    width: 29rem;
   }
 
   .mini {
