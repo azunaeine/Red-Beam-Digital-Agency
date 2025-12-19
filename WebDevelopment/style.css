@@ -84,7 +84,7 @@
 .detail-box {
   display: flex;
   flex-direction: column;
-  gap: 7px;
+  gap: 16px;
   align-items: center;
   justify-content: center;
 }
@@ -401,11 +401,6 @@
   .web-label {
     font-size: 1.25rem;
     margin-top: 1.25rem;
-  }
-
-  .title {
-    font-size: 2.5rem;
-    margin: 2.5rem 0;
   }
 
   .web-description {
