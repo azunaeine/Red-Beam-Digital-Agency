@@ -23,6 +23,21 @@
   margin-top: 4em;
 }
 
+.web-row .websiteview {
+  filter: none !important;
+  box-shadow: none !important;
+}
+
+.websiteview {
+  width: clamp(90px, 22vw, 160px);
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
 .summary {
   color: var(--Red-Beam-fire-Red, #f10707);
   text-align: center;
@@ -58,6 +73,19 @@
   gap: 0.48rem;
 }
 
+.web-description {
+  font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 90%;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 1.1vw + 0.5rem, 1.2rem);
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
 /* Web Development Portfolio Section */
 .web-row {
   display: flex;
@@ -86,15 +114,6 @@
   align-items: center;
   transition: transform 180ms ease;
   max-width: 100%;
-}
-
-.websiteview {
-  width: 100%;
-  max-width: 350px;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 
 .web-label {
@@ -136,6 +155,16 @@
 
   .web-label {
     font-size: 0.9rem;
+  }
+
+  .web-description {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
+  }
+
+  .websiteview {
+    width: 14rem;
   }
 }
 
@@ -251,6 +280,10 @@
   }
   .buy:hover {
     transform: scale(1.1);
+  }
+
+  .websiteview {
+    width: 27rem;
   }
   .square {
     width: 21em;
