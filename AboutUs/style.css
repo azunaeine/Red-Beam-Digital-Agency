@@ -48,15 +48,19 @@
   font-weight: 200;
   font-size: 1.1rem;
   margin: 1rem 0 2rem 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-in-out;
   border: none;
   cursor: pointer;
 }
 
 .readmorebutton:hover {
-  background-color: #c41212;
-  transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(232, 21, 21, 0.7);
+  transform: scale(1.1);
+}
+
+@media (max-width: 767px) {
+  .readmorebutton:hover {
+    transform: none;
+  }
 }
 
 .about-text p {
