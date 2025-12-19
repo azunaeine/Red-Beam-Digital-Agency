@@ -50,9 +50,17 @@
   width: 100%;
 }
 
+.avatar-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+
 .avatar-item {
   position: relative;
   display: inline-block;
+  transition: transform 180ms ease;
+  transform-origin: center;
 }
 
 .avatar {
@@ -61,6 +69,19 @@
   height: auto;
   object-fit: contain;
   display: block;
+}
+
+.avatar-item:hover {
+  transform: scale(1.04);
+}
+
+.avatar-item:active {
+  transform: scale(1.08);
+}
+
+.avatar-row .avatar {
+  filter: none !important;
+  box-shadow: none !important;
 }
 
 .avatar-label {
@@ -73,9 +94,14 @@
   text-align: center;
   color: #fff;
   font-weight: 700;
+  transition: color 180ms ease;
   background: rgba(0, 0, 0, 0.35);
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.65);
   pointer-events: none;
+}
+
+.avatar-item:hover .avatar-label {
+  color: #f20905;
 }
 
 .mini {
