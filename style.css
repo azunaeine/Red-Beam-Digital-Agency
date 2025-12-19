@@ -29,6 +29,10 @@ body {
   display: none;
 }
 
+.pencopy {
+  width: 3rem;
+}
+
 .list {
   width: 6.5em !important;
 }
