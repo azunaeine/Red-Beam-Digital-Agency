@@ -34,7 +34,6 @@
 
 .about-text p {
   font-size: 1.1rem;
-  line-height: 1.8;
   color: #000;
   margin-bottom: 1.5rem;
 }
@@ -396,4 +395,10 @@
 .team-section {
   padding-top: 3rem;
   padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 1440px) {
+  .about-text p {
+    line-height: 1.5rem;
+  }
 }
