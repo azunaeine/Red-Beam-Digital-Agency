@@ -318,16 +318,7 @@
   overflow: hidden;
 }
 
-.member-message:before {
-  content: '"';
-  font-size: 2.5rem;
-  color: rgba(242, 9, 5, 0.2);
-  font-family: serif;
-  line-height: 1;
-  position: absolute;
-  top: -15px;
-  left: 0;
-}
+/* Removed quotation marks from member messages */
 
 .social-links {
   display: flex;
