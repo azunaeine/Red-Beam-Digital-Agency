@@ -14,7 +14,7 @@
 
 .about-hero h1 {
   font-size: 2.5rem;
-  color: #333;
+  color: #000;
   margin-bottom: 2rem;
   font-weight: 700;
 }
@@ -35,7 +35,7 @@
 .about-text p {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: #444;
+  color: #000;
   margin-bottom: 1.5rem;
 }
 
@@ -170,4 +170,230 @@
   .values-grid {
     grid-template-columns: repeat(4, 1fr);
   }
+}
+
+/* Team Section */
+.team-section {
+  padding: 5rem 1rem;
+  background-color: #fff;
+}
+
+.team-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.team-section h2 {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.team-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.team-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  margin: 0 auto;
+  max-width: 1000px;
+  width: 100%;
+  padding: 0 2rem;
+  box-sizing: border-box;
+}
+
+.team-member {
+  flex: 0 1 400px;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.team-member:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.member-image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto 1.5rem;
+  overflow: hidden;
+  border: 4px solid #f20905;
+  padding: 4px;
+  position: relative;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.team-member:hover .member-image img {
+  transform: scale(1.05);
+}
+
+.member-info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.team-member h3 {
+  font-size: 1.6rem;
+  color: #000;
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.team-member h3:after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: #f20905;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 3px;
+}
+
+.team-member .position {
+  color: #f20905;
+  font-weight: 600;
+  margin: 1.5rem 0;
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+
+.member-message {
+  color: #555;
+  line-height: 1.7;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+  text-align: center;
+  font-style: italic;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.member-message:before,
+.member-message:after {
+  content: '"';
+  font-size: 2.5rem;
+  color: rgba(242, 9, 5, 0.2);
+  font-family: serif;
+  line-height: 1;
+  position: absolute;
+}
+
+.member-message:before {
+  top: -15px;
+  left: 0;
+}
+
+.member-message:after {
+  bottom: -30px;
+  right: 0;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #f0f0f0;
+  width: 100%;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f8f8f8;
+  color: #666;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+}
+
+.social-icon:hover {
+  background-color: #f20905;
+  color: #fff;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 5px 15px rgba(242, 9, 5, 0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 992px) {
+  .team-grid {
+    gap: 3rem;
+    max-width: 800px;
+  }
+
+  .team-member {
+    flex: 0 1 350px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-member {
+    flex: 0 1 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .member-image {
+    width: 160px;
+    height: 160px;
+  }
+
+  .team-section h2 {
+    font-size: 2.2rem;
+  }
+}
+
+/* Ensure consistent spacing between sections */
+.about-hero {
+  margin-bottom: 0;
+}
+
+.team-section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
 }
