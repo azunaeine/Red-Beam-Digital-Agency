@@ -79,6 +79,26 @@
   transform: scale(1.08);
 }
 
+.social-description {
+  text-align: center;
+  margin: 0 auto 2rem;
+  max-width: 90%;
+  color: #000000;
+  font-weight: 400;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 1.1vw + 0.5rem, 1.2rem);
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .social-description {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
+  }
+}
+
 .avatar-row .avatar {
   filter: none !important;
   box-shadow: none !important;
