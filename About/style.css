@@ -290,7 +290,14 @@
 .team-member .position {
   color: #f20905;
   font-weight: 600;
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 0.5rem 0;
+}
+
+.team-member .education {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 1.5rem 0;
+  font-weight: 500;
   font-size: 1.1rem;
   letter-spacing: 0.5px;
 }
