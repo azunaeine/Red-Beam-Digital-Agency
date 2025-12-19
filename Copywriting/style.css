@@ -4,8 +4,8 @@
   margin: 0;
 }
 
-/* Avatar and Social Media Styles */
-.avatar-row {
+/* Writing Section Styles */
+.writing-row {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -15,14 +15,14 @@
   margin: 1.5rem 0;
 }
 
-.avatar-link {
+.writing-link {
   display: inline-block;
   text-decoration: none;
   color: inherit;
   transition: transform 0.2s ease;
 }
 
-.avatar-item {
+.writing-item {
   position: relative;
   display: inline-block;
   border-radius: 8px;
@@ -31,43 +31,23 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.avatar {
-  width: 100%;
-  max-width: 300px;
+.writingpic {
+  width: 43rem;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 180ms ease;
 }
 
-.avatar-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+.writing-item:hover {
+  transform: scale(1.04);
+  box-shadow: none;
 }
 
-.avatar-item:active {
-  transform: translateY(-2px);
+.writing-item:active {
+  transform: scale(1.08);
 }
 
-.avatar-label {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.7);
-  color: white;
-  padding: 12px;
-  text-align: center;
-  font-weight: 600;
-  font-size: 1rem;
-  transition: all 0.3s ease;
-}
-
-.avatar-item:hover .avatar-label {
-  background: rgba(231, 15, 15, 0.9);
-  color: white;
-}
-
-.social-description {
+.writing {
   text-align: center;
   margin: 0 auto 2rem;
   max-width: 800px;
@@ -80,17 +60,17 @@
 
 /* Responsive adjustments */
 @media screen and (max-width: 768px) {
-  .avatar-row {
+  .writing-row {
     gap: 1rem;
   }
 
-  .social-description {
+  .writing {
     font-size: 1rem;
     padding: 0 0.5rem;
   }
 
-  .avatar {
-    max-width: 100%;
+  .writingpic {
+    width: 39rem;
   }
 }
 
@@ -185,6 +165,12 @@
   .summary {
     font-size: 0.95em;
   }
+
+  .writing {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -261,11 +247,14 @@
   opacity: 1;
 }
 
-.web-description {
+.writing {
   text-align: center;
-  margin: 1rem auto 2rem;
-  max-width: 800px;
-  color: #333;
-  line-height: 1.6;
+  margin: 0 auto 2rem;
+  max-width: 90%;
+  color: #000000;
+  font-weight: 600;
+  line-height: 1.5;
+  font-size: clamp(0.9rem, 1.1vw + 0.5rem, 1.2rem);
   padding: 0 1rem;
+  box-sizing: border-box;
 }
