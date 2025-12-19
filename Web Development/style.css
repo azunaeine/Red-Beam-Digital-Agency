@@ -111,22 +111,26 @@
 
 /* Web Development Portfolio Section */
 .web-row {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
   width: 100%;
-  margin: 1.5rem 0;
+  margin: 1.5rem auto;
   padding: 0 1rem;
+  max-width: 1200px;
   box-sizing: border-box;
+  justify-content: center;
 }
 
 .web-link {
-  display: inline-block;
+  display: block;
   text-decoration: none;
   color: inherit;
   transition: transform 180ms ease;
   transform-origin: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .web-item {
@@ -135,58 +139,144 @@
   flex-direction: column;
   align-items: center;
   transition: transform 180ms ease;
-  max-width: 100%;
-}
-
-.web-label {
-  margin-top: 0.75rem;
-  font-size: 1rem;
-  font-weight: 600;
-  text-align: center;
-  color: #000;
-  transition: color 180ms ease;
-  max-width: 100%;
-  padding: 0 0.5rem;
+  width: 100%;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
-/* Hover and Active States */
-.web-link:hover {
-  transform: scale(1.02);
+.websiteview {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
 
+.web-label {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  color: #333;
+  transition: color 180ms ease;
+  width: 100%;
+  padding: 0.5rem 0;
+  box-sizing: border-box;
+  white-space: normal;
+  word-break: break-word;
+}
+
+/* Hover and Active States */
+@media (hover: hover) {
+  .web-link:hover {
+    transform: translateY(-5px);
+  }
+
+  .web-link:hover .websiteview {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+  }
+
+  .web-link:hover .web-label {
+    color: #f20905;
+  }
+}
+
+/* Touch devices */
 .web-link:active {
   transform: scale(0.98);
 }
 
-.web-link:hover .web-label {
-  color: #f20905;
+/* Responsive Adjustments */
+@media screen and (max-width: 1024px) {
+  .web-row {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 0 1.5rem;
+  }
 }
 
-/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
   .web-row {
-    gap: 1rem;
-    padding: 0 0.5rem;
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 1.5rem auto;
+    padding: 0 1.25rem;
+    gap: 1.5rem;
   }
 
   .web-link {
-    width: 100%;
-    max-width: 300px;
+    max-width: 100%;
+    margin-bottom: 0.5rem;
   }
 
   .web-label {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    padding: 0.75rem 0.5rem;
+    margin-top: 0.75rem;
+  }
+
+  .web-item {
+    padding: 0.75rem;
+  }
+
+  .title {
+    font-size: 1.7rem;
+    margin: 1.5rem 0;
   }
 
   .web-description {
-    max-width: 100%;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     padding: 0 0.5rem;
-    font-size: clamp(0.85rem, 1vw + 0.5rem, 1rem);
   }
 
-  .websiteview {
-    width: 14rem;
+  /* Adjust the mini class for mobile */
+  .mini {
+    width: 90%;
+    max-width: 28.8em;
+    height: auto;
+    margin: 0 auto;
+    padding: 1rem;
+  }
+
+  .summary {
+    font-size: 1.1em;
+    padding: 0 1rem;
+    line-height: 1.6;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .web-row {
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .web-label {
+    font-size: 1rem;
+    padding: 0.5rem 0.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    margin: 1.25rem 0;
+  }
+
+  .web-description {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .mini {
+    width: 95%;
+    padding: 0.75rem;
+  }
+
+  .summary {
+    font-size: 1em;
+    padding: 0 0.75rem;
   }
 }
 
@@ -274,34 +364,80 @@
   }
 }
 
+/* Large desktops (1440px and up) */
 @media screen and (min-width: 1440px) {
+  .web-row {
+    max-width: 1400px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+    padding: 0 2rem;
+  }
+
+  .web-link {
+    max-width: 450px;
+  }
+
+  .web-item {
+    padding: 1.25rem;
+  }
+
+  .websiteview {
+    border-radius: 10px;
+  }
+
+  .web-label {
+    font-size: 1.25rem;
+    margin-top: 1.25rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    margin: 2.5rem 0;
+  }
+
+  .web-description {
+    font-size: 1.25rem;
+    max-width: 1200px;
+    margin: 0 auto 3rem;
+  }
+
+  /* Mini section adjustments */
   .summary {
     font-size: 1.75em;
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding: 0 2.5rem;
+    line-height: 1.8;
   }
 
   .mini {
-    width: 41.8em;
+    width: 45em;
+    max-width: 90%;
     display: flex;
     flex-direction: column;
-    gap: 0.65rem;
-    height: 37rem;
+    gap: 0.85rem;
+    height: 40rem;
+    margin: 0 auto;
+    padding: 1.5rem;
   }
+
   p.purchase {
-    font-size: 0.93rem;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
   }
 
   .sub-purchase {
-    font-size: 0.63rem;
-    font-weight: 700;
+    font-size: 0.75rem;
+    font-weight: 600;
   }
 
   .buy {
-    transition: all 1s ease-out;
+    transition: all 0.3s ease-out;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
   }
+
   .buy:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   .websiteview {
