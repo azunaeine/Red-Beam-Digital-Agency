@@ -103,7 +103,9 @@
   padding: 2rem;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   text-align: center;
 }
 
@@ -238,11 +240,11 @@
 }
 
 .team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  display: flex;
+  justify-content: center;
   gap: 2.5rem;
   margin: 0 auto;
-  max-width: 1200px;
+  max-width: 500px;
   width: 100%;
   padding: 0 2rem;
   box-sizing: border-box;
